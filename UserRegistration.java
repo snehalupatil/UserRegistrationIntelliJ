@@ -71,18 +71,18 @@ public class UserRegistration
 
     }
 
-    //UC6 "Added: Check password Rule 2 - Should have atleast 1 upper case "
+    //"Added: Check password Rule 3 - Should have atleast 1 Numeric Number "
     public static void checkPassword()
     {
         String password;
         System.out.println();
-        System.out.println("Enter User Password : ");
+        System.out.println("Enter User password : ");
         password = inputUserValue();
-        boolean check_password = Pattern.matches("(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{8,}",password);
+        boolean check_password = Pattern.matches("(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}",password);
         if(check_password == true)
-            System.out.println("User Password is : " +password);
+            System.out.println("User password is : " +password);
         else
-            System.out.println("Password is invalid. Enter the valid Password:");
+            System.out.println("password is invalid Enter the valid password ");
 
     }
 
@@ -90,10 +90,10 @@ public class UserRegistration
 
     public static void main(String[] args)
     {
-        checkfirstName();
-        checklastName();
-        checkEmailId();
-        checkMobileNo();
+        //checkfirstName();
+        //checklastName();
+        //checkEmailId();
+        //checkMobileNo();
         checkPassword();
     }
 }

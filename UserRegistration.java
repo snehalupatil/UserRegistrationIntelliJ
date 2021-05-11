@@ -55,10 +55,27 @@ public class UserRegistration
             System.out.println("Email id is invalid Enter the valid first name ");
 
     }
+
+    //UC4 "Added: Check User Mobile No. is valid or not "
+    public static void checkMobileNo()
+    {
+        String mobileNO;
+        System.out.println();
+        System.out.println("Enter User Mobile number : ");
+        mobileNO = inputUserValue();
+        boolean check_MobileNo = Pattern.matches("[0-9]{2}[\\s][789]{1}[0-9]{9}",mobileNO);
+        if(check_MobileNo == true)
+            System.out.println("User mobile NO is : " +mobileNO);
+        else
+            System.out.println("Mobile No is invalid Enter the valid first name ");
+
+    }
+
     public static void main(String[] args)
     {
         checkfirstName();
         checklastName();
         checkEmailId();
+        checkMobileNo();
     }
 }

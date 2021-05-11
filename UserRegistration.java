@@ -38,7 +38,7 @@ public class UserRegistration
         if(check_LastName == true)
             System.out.println("Last name is : " +lastName);
         else
-            System.out.println("Last name is invalid Enter the valid first name ");
+            System.out.println("Last name is invalid Enter the valid last Name ");
     }
 
     //UC3 "Added: Check User Email ID is valid or not "
@@ -52,7 +52,7 @@ public class UserRegistration
         if(check_Emailid == true)
             System.out.println("User Email ID is : " +emailid);
         else
-            System.out.println("Email id is invalid Enter the valid first name ");
+            System.out.println("Email id is invalid Enter the valid Email ID ");
 
     }
 
@@ -67,9 +67,26 @@ public class UserRegistration
         if(check_MobileNo == true)
             System.out.println("User mobile NO is : " +mobileNO);
         else
-            System.out.println("Mobile No is invalid Enter the valid first name ");
+            System.out.println("Mobile No is invalid Enter the valid Mobile no. ");
 
     }
+
+    //UC5 "Added: Check password Rule 1 - Minimum 8 character "
+    public static void checkPassword()
+    {
+        String password;
+        System.out.println();
+        System.out.println("Enter User password : ");
+        password = inputUserValue();
+        boolean check_password = Pattern.matches("[a-zA-z]{8,}",password);
+        if(check_password == true)
+            System.out.println("User Password is : " +password);
+        else
+            System.out.println("Password is invalid. Enter the valid Password ");
+
+    }
+
+
 
     public static void main(String[] args)
     {
@@ -77,5 +94,6 @@ public class UserRegistration
         checklastName();
         checkEmailId();
         checkMobileNo();
+        checkPassword();
     }
 }

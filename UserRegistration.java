@@ -71,18 +71,18 @@ public class UserRegistration
 
     }
 
-    //UC5 "Added: Check password Rule 1 - Minimum 8 character "
+    //UC6 "Added: Check password Rule 2 - Should have atleast 1 upper case "
     public static void checkPassword()
     {
         String password;
         System.out.println();
-        System.out.println("Enter User password : ");
+        System.out.println("Enter User Password : ");
         password = inputUserValue();
-        boolean check_password = Pattern.matches("[a-zA-z]{8,}",password);
+        boolean check_password = Pattern.matches("(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{8,}",password);
         if(check_password == true)
             System.out.println("User Password is : " +password);
         else
-            System.out.println("Password is invalid. Enter the valid Password ");
+            System.out.println("Password is invalid. Enter the valid Password:");
 
     }
 

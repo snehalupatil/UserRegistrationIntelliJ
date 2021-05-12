@@ -31,7 +31,7 @@ public class UserRegistration
             if(check_Emailid == true)
                 System.out.println("User Email ID is : " +e);
             else
-                System.out.println("Email id is invalid Enter the valid Email ID ");
+                System.out.println("Email id is invalid. Enter the valid Email ID ");
         }
 
 

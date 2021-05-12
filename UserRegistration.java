@@ -78,7 +78,7 @@ public class UserRegistration
         System.out.println();
         System.out.println("Enter User password : ");
         password = inputUserValue();
-        boolean check_password = Pattern.matches("(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}",password);
+        boolean check_password = Pattern.matches("^(?=.*[A-Za-z])(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$",password);
         if(check_password == true)
             System.out.println("User password is : " +password);
         else
